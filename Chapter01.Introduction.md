@@ -4,6 +4,7 @@
 
 - [Python AI Introduction](#python-ai-introduction)
     - [AI example](#ai-example)
+    - [Other examples](#other-examples)
 
 <!-- /TOC -->
 
@@ -51,3 +52,19 @@ example11: 使用卷积神经网络训练，给定一张图片，自动生成文
 example12: 使用卷积神经网络训练，给定一段人活动的视频，能自动识别出人的动作（下楼、上楼、坐、站立等姿势）
 
 example13: 使用python自动收集金融数据并分析、可视化。
+
+## Other examples
+
+机器学习框架scikit-learn, 
+
+监督学习:
+- knn算法，线性回归，logistic回归
+- 决策树
+- 朴素贝叶斯
+- 验证码识别
+
+无监督学习:
+- 聚类k-means
+- tensorflow
+- .cnn
+- .rnn
