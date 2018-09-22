@@ -5,6 +5,7 @@
 - [Python AI Introduction](#python-ai-introduction)
     - [AI example](#ai-example)
     - [Other examples](#other-examples)
+    - [python big data](#python-big-data)
 
 <!-- /TOC -->
 
@@ -68,3 +69,9 @@ example13: 使用python自动收集金融数据并分析、可视化。
 - tensorflow
 - .cnn
 - .rnn
+
+## python big data
+
+- python hadoop
+- python spark
+- python storm
