@@ -90,3 +90,41 @@ API Key
 ```
 
 根据[API文档](https://ai.baidu.com/docs#/OCR-Python-SDK/32034d46)写代码
+
+```python
+from aip import AipOcr
+
+APP_ID = '666666666'
+API_KEY = 'xxxxxxxxx'
+SECRET_KEY = 'yyyyyyyyy'
+
+client = AipOcr(APP_ID, API_KEY, SECRET_KEY)
+
+# read image
+def get_file_content(filePath):
+    with open(filePath, 'rb') as fp:
+        return fp.read()
+
+image = get_file_content('chn.png')
+
+options = {}
+options["language_type"] = "CHN_ENG"
+options["detect_direction"] = "true"
+options["detect_language"] = "true"
+options["probability"] = "true"
+
+client.basicGeneral(image, options)
+```
+
+```bash
+# output
+{'log_id': 7829085531619740665,
+ 'direction': 0,
+ 'words_result_num': 1,
+ 'words_result': [{'words': '这里有一份不裁员公司名单',
+   'probability': {'variance': 1.5e-05,
+    'average': 0.997777,
+    'min': 0.987008}}],
+ 'language': 3}
+```
+
