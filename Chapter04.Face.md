@@ -240,5 +240,4 @@ example2: dish recognition
 
 ## Knowledge Graph
 
-知识图谱表示的是各种物品直接的关系，一般永远客服机器人。
-
+知识图谱表示的是各种事物的关系，一般永远客服机器人。
