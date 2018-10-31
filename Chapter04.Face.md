@@ -5,6 +5,7 @@
 - [Face](#face)
     - [BaiduAI Face Recognition](#baiduai-face-recognition)
     - [BaiduAI NLP](#baiduai-nlp)
+    - [Image recognition](#image-recognition)
 
 <!-- /TOC -->
 
@@ -179,3 +180,59 @@ example4: 评论观点
    'end_pos': 10,
    'adj': '好吃'}]}
 ```
+
+## Image recognition
+
+example1: general recognition
+
+```python
+from aip import AipImageClassify
+
+
+APP_ID = 'xxxxxx'
+API_KEY = 'yyyyyy'
+SECRET_KEY = 'zzzzzz'
+client = AipImageClassify(APP_ID, API_KEY, SECRET_KEY)
+
+def get_content(filename):
+    with open(filename, 'rb') as file:
+        return file.read()
+
+img=get_content('Image/fruits.jpg')
+res=client.advancedGeneral(img)
+```
+
+```bash
+# output
+{'log_id': 228571135242883551,
+ 'result_num': 5,
+ 'result': [{'score': 0.58972, 'root': '商品-水果', 'keyword': '猕猴桃'},
+  {'score': 0.436514, 'root': '植物-蔷薇科', 'keyword': '草莓'},
+  {'score': 0.289548, 'root': '植物-仙人掌科', 'keyword': '仙人球'},
+  {'score': 0.149522, 'root': '商品-水果', 'keyword': '新鲜水果'},
+  {'score': 0.000973, 'root': '植物-果实/种子', 'keyword': '红草莓'}]}
+```
+
+example2: dish recognition
+
+```bash
+# # output
+# img2=get_content('Image/sichuan.jpg')
+# res2=client.dishDetect(img2, options={'top_num':3,})
+{'log_id': 3607199214192999615,
+ 'result_num': 3,
+ 'result': [{'calorie': '154',
+   'has_calorie': True,
+   'name': '鱼香肉丝',
+   'probability': '0.968383'},
+  {'calorie': '240',
+   'has_calorie': True,
+   'name': '酱肉丝',
+   'probability': '0.0270292'},
+  {'calorie': '268',
+   'has_calorie': True,
+   'name': '肉丝饭',
+   'probability': '0.00303683'}]}
+```
+
+其他应用: 车辆识别、动物识别、植物识别
