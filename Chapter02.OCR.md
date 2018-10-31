@@ -51,6 +51,8 @@ with open('c\\result.txt', 'r') as file:
     print(file.read())
 ```
 
+> tesseract训练数据, [example](https://blog.csdn.net/business122/article/details/79174774)
+
 ## pytesseract
 
 ```python
