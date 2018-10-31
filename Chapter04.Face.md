@@ -4,6 +4,7 @@
 
 - [Face](#face)
     - [BaiduAI Face Recognition](#baiduai-face-recognition)
+    - [BaiduAI NLP](#baiduai-nlp)
 
 <!-- /TOC -->
 
@@ -92,4 +93,89 @@ res=client.match(images=[
  'result': {'score': 91.41099548,
   'face_list': [{'face_token': '6ba99caeb1d27ad53700c0406416d7f0'},
    {'face_token': '7c258ef3e2815be8c655366832992423'}]}}
+```
+
+## BaiduAI NLP
+
+example1: 词法分析
+
+```python
+from aip import AipNlp
+
+APP_ID = 'xxxxxx'
+API_KEY = '666666'
+SECRET_KEY = '777777'
+
+client = AipNlp(APP_ID, API_KEY, SECRET_KEY)
+res=client.lexer('我今天很高兴')
+```
+
+```bash
+# output
+{'log_id': 3331798020324814463,
+ 'text': '我今天很高兴',
+ 'items': [{'loc_details': [],
+   'byte_offset': 0,
+   'uri': '',
+   'pos': 'r',
+   'ne': '',
+   'item': '我',
+   'basic_words': ['我'],
+   'byte_length': 2,
+   'formal': ''},
+  {'loc_details': [],
+   'byte_offset': 2,
+   'uri': '',
+   'pos': '',
+   'ne': 'TIME',
+   'item': '今天',
+   'basic_words': ['今天'],
+   'byte_length': 4,
+   'formal': ''},
+  {'loc_details': [],
+   'byte_offset': 6,
+   'uri': '',
+   'pos': 'a',
+   'ne': '',
+   'item': '很高兴',
+   'basic_words': ['很', '高兴'],
+   'byte_length': 6,
+   'formal': ''}]}
+```
+
+example2: 短文本相似度
+
+```bash
+# # output
+# client.simnet('英俊', '帅')
+{'log_id': 2268038743521071103,
+ 'texts': {'text_2': '帅', 'text_1': '英俊'},
+ 'score': 0.760255}
+```
+
+example3: 情感分析
+
+```bash
+# # output
+# client.sentimentClassify('我今天很高兴')
+{'log_id': 5255506060294199327,
+ 'text': '我今天很高兴',
+ 'items': [{'positive_prob': 0.63481,
+   'confidence': 0.188467,
+   'negative_prob': 0.36519,
+   'sentiment': 2}]}
+```
+
+example4: 评论观点
+
+```bash
+# # output
+# client.commentTag('苹果很好吃')
+{'log_id': 6022206784532697759,
+ 'items': [{'sentiment': 2,
+   'abstract': '<span>苹果很好吃</span>',
+   'prop': '苹果',
+   'begin_pos': 0,
+   'end_pos': 10,
+   'adj': '好吃'}]}
 ```
