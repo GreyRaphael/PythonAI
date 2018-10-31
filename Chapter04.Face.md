@@ -6,6 +6,7 @@
     - [BaiduAI Face Recognition](#baiduai-face-recognition)
     - [BaiduAI NLP](#baiduai-nlp)
     - [Image recognition](#image-recognition)
+    - [Knowledge Graph](#knowledge-graph)
 
 <!-- /TOC -->
 
@@ -236,3 +237,8 @@ example2: dish recognition
 ```
 
 其他应用: 车辆识别、动物识别、植物识别
+
+## Knowledge Graph
+
+知识图谱表示的是各种物品直接的关系，一般永远客服机器人。
+
