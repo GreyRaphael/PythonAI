@@ -66,6 +66,12 @@ Machine Learning:
 - unsupervised learning
 - reinforcement learing
 
+Machine Learning:
+> ![](res_05/ai_classification01.png)
+- Supervised Learning: 有标准答案的即时反馈
+- Unsupervised Learning:事先没有任何训练数据样本，需要直接对数据进行建模
+- Reinforcement Learning: 积累一段时候之后反馈, 比如小车碰到障碍物训练
+
 ## Application
 
 - document classification: 文本分类
@@ -81,6 +87,18 @@ Machine Learning:
 - medicine ai
 - detecing earthquake
 - game: alpha go
+
+AlphaGo过程:
+> ![](res_05/alphago01.png)
+1. 根据棋谱进行监督学习(图像识别深度学习), 得到"根据当前State → 下一步Action"的SL policy network
+2. 利用SL police network进行自我对弈，得到RL policy network
+3. 然后利用value network(通过regression实现)判断大局的赢率
+4. 将RL和VL加入马尔科夫决策树
+
+AlphaGo 适用条件:
+- 目标函数明确
+- 规则明确、信息完全
+- big data
 
 ## Bayes & Stochastic Process
 
