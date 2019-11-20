@@ -24,6 +24,48 @@ Classic Machine Learning
 AI Classification
 > <img src="res_05/ai_classification.png" height=500>
 
+Machine Learning:
+- supervised learning(biggest part):
+  - KNN family: 
+    - notion of supervise learning
+    - square
+    - structureed regression
+    - bias-variance tradeoff
+  - linear regression:
+    - linear assumption: gaussian mixture(2vsN) assumption, comapre KNN with linear regression
+    - what is feature
+    - feature selection:
+      - correction
+      - distribution-skewness
+      - automatic selection
+    - lasso & ridge regression:
+      - lasso-sparse property
+      - when the features are not independent
+    - variance-bias paradox
+  - linear classification:
+    - LDA
+    - logistic regression
+    - vc dimension, statistical learning theory
+    - model vs data complexity
+  - neural network:
+    - nonlinear
+    - universal function approximator
+  - SVM:
+    - laplace transform
+    - nonlinear transform
+    - example
+  - Native Bayes
+  - Graphic models
+  - model selection
+  - decision tree:
+    - tree
+      - depth
+      - type of data
+    - random forest
+    - gradient boosting, extreme gradient boosting
+- unsupervised learning
+- reinforcement learing
+
 ## Application
 
 - document classification: 文本分类
@@ -39,3 +81,25 @@ AI Classification
 - medicine ai
 - detecing earthquake
 - game: alpha go
+
+## Bayes & Stochastic Process
+
+- Bayes Analysis:
+  - 条件概率
+    - 主观概率
+    - 幸存者偏差
+  - 贝叶斯公式
+  - 贝叶斯统计
+  - 贝叶斯决策
+  - 朴素贝叶斯
+
+Stochastic Process:
+- 随机变量
+- 各类分布函数
+- wiener process
+- possson process
+- levy process
+- monte cario simulation
+- 马尔科夫链
+- 稳态过程
+
