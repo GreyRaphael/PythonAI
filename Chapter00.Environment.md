@@ -111,3 +111,16 @@ cpu_time = timeit.timeit(cpu_run, number=10)
 gpu_time = timeit.timeit(gpu_run, number=10)
 print('run time:', cpu_time, gpu_time)
 ```
+
+## Environment Configuration
+
+tensorflow:
+- CPU版本: `conda install tensorflow`
+- GPU版本: `conda install tensorflow-gpu`
+
+```py
+# in ipyton
+import tensorflow as tf
+
+tf.test.is_gpu_available() # True表示gpu能用
+```
