@@ -124,3 +124,5 @@ import tensorflow as tf
 
 tf.test.is_gpu_available() # True表示gpu能用
 ```
+
+Linux check gpu: `lspci`
