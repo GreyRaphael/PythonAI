@@ -121,3 +121,9 @@ Stochastic Process:
 - 马尔科夫链
 - 稳态过程
 
+Complexity ruins predicatability(非线性动力学)
+- Randomness
+- Chaos
+- Reflectivity: 存在反馈，e.g. 买卖股票导致股票涨跌
+- Network Effect
+- History Dependency
